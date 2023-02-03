@@ -1,6 +1,6 @@
 <template>
-  <div>
-    
+  <div class="ml-[248px] mt-[163px]">
+    <Product />
   </div>
 </template>
 
