@@ -2,9 +2,7 @@
   <div>
     <Header />
     <Tabs />
-    <div>
-      <slot />
-    </div>
+    <slot />
   </div>
 </template>
 

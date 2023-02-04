@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-between items-center w-full h-[66px] bg-white shadow-[0px_4px_16px_rgba(0,0,0,0.05)]"
+    class="fixed flex justify-between items-center w-full z-50 h-[66px] bg-white shadow-[0px_4px_16px_rgba(0,0,0,0.05)]"
   >
     <div class="sm:ml-[88px] ml-[27px] font-bold text-2xl text-slate-500">TestList</div>
     <div class="flex sm:mr-[108px] mr-[27px] relative w-[34px] h-[34px] justify-center text-center">
