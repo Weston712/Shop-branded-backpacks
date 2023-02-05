@@ -1,7 +1,7 @@
 <template>
   <div class="ml-[248px] pt-[163px] mr-[88px]">
     <div class="flex flex-wrap items-end">
-      <div class="fixed top-[108px] right-[88px] z-50">
+      <div class="fixed top-[108px] z-50 right-[88px] ">
         <div class="flex">
           <div class="font-normal text-base">Сортировать по:</div>
           <div class="relative font-normal text-base ml-[6px] text-gray-600 cursor-pointer">
