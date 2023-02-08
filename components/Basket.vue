@@ -14,7 +14,7 @@
           <BasketProduct />
         </div>
         <div>
-          <BasketForm />
+          <BasketFormInp />
         </div>
       </div>
     </div>

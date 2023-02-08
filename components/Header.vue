@@ -2,7 +2,7 @@
   <div
     class="fixed flex justify-between items-center w-full z-50 h-[66px] bg-white shadow-[0px_4px_16px_rgba(0,0,0,0.05)]"
   >
-    <div class="sm:ml-[88px] ml-[27px] font-bold text-2xl text-slate-500">TestList</div>
+    <div class="sm:ml-[88px] ml-[27px] font-bold text-2xl text-[#59606D]">TestList</div>
     <div class="flex sm:mr-[108px] mr-[27px] relative w-[34px] h-[34px] justify-center text-center">
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path

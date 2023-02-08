@@ -3,7 +3,7 @@
     <Header />
     <Tabs />
     <slot />
-    <Basket />
+    <!-- <Basket /> -->
   </div>
 </template>
 
