@@ -1,9 +1,8 @@
 <template>
   <div>
     <div
-    id="category"
       class="w-[264px] h-[272px] left-[248px] top-[163px] mr-4 mt-4 bg-white shadow-[0px_4px_16px_rgba(0,0,0,0.05)] rounded-lg"
-      :data-cat="product.category"
+      v-for="product in arrayProducts" :key="product.id"
     >
       <div class="relative flex justify-between">
         <div class="absolute top-[20px] left-[20px] flex">
@@ -15,7 +14,7 @@
               fill="#F2C94C"
             />
           </svg>
-          <div class="font-bold text-[10px] ml-[3px] text-yellow-500">{{product.rating}}</div>
+          <div class="font-bold text-[10px] text-yellow-500">4.5</div>
         </div>
         <div class="absolute top-[20px] right-[20px] hover:stroke-black cursor-pointer">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,16 +40,16 @@
         </div>
       </div>
       <div class="pl-[61px] mr-[60.29px]">
-        <img class="pt-[18px]" :src="`https://frontend-test.idaproject.com${product.photo}`" loading="lazy" :alt="product.name" />
+        <img class="pt-[18px]" src="../static/png/1.png" loading="lazy" alt="Сумка" />
       </div>
-      <div class="font-normal text-sm pl-4 pt-8 items-end text-gray-500">{{product.name}}</div>
-      <div class="font-bold text-sm pl-4 pt-[8px]">{{ product.price }} ₽</div>
+      <div class="font-normal text-sm pl-4 pt-4 items-end text-gray-500">Рюкзак Louis Vuitton Discovery</div>
+      <div class="font-bold text-sm pl-4 pt-[6px]">150 000 ₽</div>
     </div>
   </div>
 </template>
 
 <script setup>
-const { product } = defineProps({ product: Object });
+const {date: arrayProducts} = await useFetch('https://frontend-test.idaproject.com/api/product')
 </script>
 
 <style scoped></style>

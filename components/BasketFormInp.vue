@@ -1,6 +1,6 @@
 <template>
   <div class="mt-8 ml-12 text-[#59606D]">Оформить заказ</div>
-  <form class="ml-12" @submit.prevent="">
+  <form class="ml-12">
     <input
       class="w-[364px] h-[50px] mt-4 bg-[#F8F8F8] rounded-lg pl-[14px]"
       type="text"
