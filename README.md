@@ -1,42 +1,32 @@
-# Nuxt 3 Minimal Starter
+# Интернет-магазин
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Функционал
+___________
 
-## Setup
+### Каталог
++ Товары можно добавлять в корзину
++ Фильтрация товара по цене
++ Фильтрация товара по рейтингу
 
-Make sure to install the dependencies:
 
-```bash
-# yarn
-yarn install
+# Стек
++ Vue 3 Composition API
++ Pinia
++ API товаров https://frontend-test.idaproject.com/api/product
++ API категории товаров https://frontend-test.idaproject.com/api/product-category
 
-# npm
-npm install
 
-# pnpm
-pnpm install
-```
 
-## Development Server
+# Установка
 
-Start the development server on http://localhost:3000
+1. Для запуска на локальной машине необходимо:
 
-```bash
-npm run dev
-```
+    Установить npm зависимости:
 
-## Production
+        npm install
 
-Build the application for production:
+2. Запустить в режиме разработки:
+   
+        npm run serve
 
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+   Если все прошло успешно, проект будет запущен на http://localhost:8080

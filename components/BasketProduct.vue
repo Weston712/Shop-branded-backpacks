@@ -1,13 +1,20 @@
+<script setup>
+import { defineStore } from "pinia";
+import { useProductStore } from "~~/stores/ProductStore";
+const productStore = useProductStore();
+const { product, cartStore } = defineProps(["product", "cartStore"]);
+</script>
+
 <template>
   <div
-    class=" relative flex w-[364px] h-[120px] mt-[16px] mr-12 ml-12 bg-white shadow-[0px_4px_16px_rgba(0,0,0,0.05)] rounded-lg"
+    class="relative flex w-[364px] h-[120px] mt-[16px] mr-12 ml-12 bg-white shadow-[0px_4px_16px_rgba(0,0,0,0.05)] rounded-lg"
   >
     <div class="w-[70px] h-[90px] mt-[15px] mb-[15px] ml-[25px]">
-      <img src="../static/png/1.png" alt="" />
+      <img :src="`https://frontend-test.idaproject.com${product.photo}`" :alt="product.name" />
     </div>
     <div class="ml-[34.43px]">
-      <p class="font-normal mt-3 text-[#59606D]">Рюкзак Louis Vuitton Discovery</p>
-      <p class="font-bold mt-[6px]">150 000 ₽</p>
+      <p class="font-normal mt-3 text-[#59606D]">{{ product.name }}</p>
+      <p class="font-bold mt-[6px]">{{ product.price }} Р</p>
       <div class="flex">
         <div class="mb-[16px] pt-[8px] ml-2">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,7 +26,7 @@
             />
           </svg>
         </div>
-        <div class="font-bold text-[12px] mt-[7.13px] ml-1 text-[#F2C94C]">4.5</div>
+        <div class="font-bold text-[12px] mt-[7.13px] ml-1 text-[#F2C94C]">{{ product.rating }}</div>
       </div>
     </div>
     <div class="mt-[52px] mr-[22px] cursor-pointer hover:stroke-black">
