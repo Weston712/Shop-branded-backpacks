@@ -1,10 +1,9 @@
 <script setup>
-import { defineStore } from "pinia";
-import { cart } from "~~/src/open";
-import { ref } from "vue";
+import { storeToRefs } from 'pinia';
+import { cart } from '/src/open';
 import { useProductStore } from "~~/stores/ProductStore";
-
 const productStore = useProductStore();
+const { cartStore, countBasket, totalPrice } = storeToRefs(productStore);
 </script>
 
 <template>
@@ -18,9 +17,10 @@ const productStore = useProductStore();
           <div class="font-bold text-3xl mt-[52px] ml-12">Корзина</div>
           <div @click="cart.setisOpened(false)" class="mt-[65px] mr-[53px] rotate-45 text-2xl"><button>+</button></div>
         </div>
-        <div v-if="productStore.countBasket > 0">
+        <div v-if="countBasket > 0">
           <div class="font-normal text-lg leading-[23px] mt-6 ml-12 text-[#59606D]">Товары в корзине</div>
-          <BasketProduct v-for="product in productStore.cartStore" :key="product" :product="product" />
+          <BasketProduct v-for="product in cartStore" :key="product" :product="product" />
+          <div>Полная стоимость: {{ totalPrice }}</div>
         </div>
         <div v-else>
           <div class="ml-12 mt-6 font-normal text-[22px] leading-[28px]">

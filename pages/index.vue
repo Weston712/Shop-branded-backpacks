@@ -1,21 +1,35 @@
 <script setup>
 import { ref } from "vue";
-const { data: arrayProduct } = await useFetch(`https://frontend-test.idaproject.com/api/product`);
+import states from "~~/consts/states";
 
 const sortActive = ref(false);
 
-const openModal = () => {
+const onModalButtonClick = () => {
   sortActive.value = !sortActive.value;
 };
 
-const filter = ref(arrayProduct);
+const productsState = useState(states.PROCUCTS);
+const productListFiltered = ref(productsState.value.all);
+const categoryState = useState(states.SELECTED_CATEGORY);
+
+watch(categoryState, (value) => {
+  console.log('> Index -> watch: categoryState =', value, productsState.value.categories);
+  productListFiltered.value = productsState.value.categories[value.id];
+})
+
+const categoryFilter = () => {
+  const categoryId = categoryState.value.id;
+  productListFiltered.value = productsState.value.filter((p) => {
+    return p.category === categoryId;
+  });
+}
 
 const productFilter = (e) => {
   if (e === "price") {
-    filter.value = filter.value.sort((a, b) => b.price - a.price);
+    productListFiltered.value = productListFiltered.value.sort((a, b) => b.price - a.price);
   }
   if (e === "popular") {
-    filter.value = filter.value.sort((a, b) => b.rating - a.rating);
+    productListFiltered.value = productListFiltered.value.sort((a, b) => b.rating - a.rating);
   }
   sortActive.value = !sortActive.value;
 };
@@ -26,7 +40,7 @@ const productFilter = (e) => {
       <div class="fixed top-[108px] z-50 right-[88px]">
         <div class="flex">
           <div class="font-normal text-base mr-[10px]">Сортировать по:</div>
-          <div @click="openModal" class="relative font-normal text-base ml-[4px] text-gray-600 cursor-pointer">
+          <div @click="onModalButtonClick" class="relative font-normal text-base ml-[4px] text-gray-600 cursor-pointer">
             цене
             <svg
               class="absolute top-0 right-[-8px] w-[5px] h-[2.5px] mt-[13px]"
@@ -55,7 +69,7 @@ const productFilter = (e) => {
           </div>
         </div>
       </div>
-      <Product v-for="product in arrayProduct" :key="product.id" :product="product" />
+      <Product v-for="product in productListFiltered" :key="product.id" :product="product" />
     </div>
   </div>
 </template>
