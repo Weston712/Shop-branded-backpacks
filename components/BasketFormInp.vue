@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-8 ml-12 text-[#59606D]">Оформить заказ</div>
-  <form class="ml-12">
+  <div class="mt-8 text-[#59606D]">Оформить заказ</div>
+  <form>
     <input
       class="w-[364px] h-[50px] mt-4 bg-[#F8F8F8] rounded-lg pl-[14px]"
       type="text"
@@ -11,7 +11,7 @@
     />
     <input
       class="w-[364px] h-[50px] mt-4 bg-[#F8F8F8] rounded-lg pl-[14px]"
-      type="text"
+      type="let"
       name=""
       id=""
       placeholder="Телефон"

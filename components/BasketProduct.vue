@@ -6,7 +6,7 @@ const { product, cartStore } = defineProps(["product", "cartStore"]);
 
 <template>
   <div
-    class="relative flex w-[364px] h-[120px] mt-[16px] mr-12 ml-12 bg-white shadow-[0px_4px_16px_rgba(0,0,0,0.05)] rounded-lg"
+    class="relative flex w-[364px] h-[120px] mt-[12px] mr-12 bg-white shadow-[0px_4px_16px_rgba(0,0,0,0.05)] rounded-lg"
   >
     <div class="w-[70px] h-[90px] mt-[15px] mb-[15px] ml-[25px]">
       <img :src="`https://frontend-test.idaproject.com${product.photo}`" :alt="product.name" />
