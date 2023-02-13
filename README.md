@@ -1,4 +1,4 @@
-# Интернет-магазин
+# Интернет-магазин брендовых сумок
 
 ## Дэплой
 ______
@@ -22,6 +22,7 @@ ___________
 
 # Стек
 + Vue 3 Composition API
++ Tailwindcss
 + Pinia
 + API товаров https://frontend-test.idaproject.com/api/product
 + API категории товаров https://frontend-test.idaproject.com/api/product-category

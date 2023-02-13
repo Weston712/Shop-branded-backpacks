@@ -29,7 +29,7 @@ const { cartStore, countBasket, totalPrice } = storeToRefs(productStore);
           </div>
           <div
             @click="cart.setisOpened(false)"
-            class="w-[364px] h-[50px] mb-[32px] mt-6 bg-black rounded-lg cursor-pointer"
+            class="w-[364px] h-[50px] mb-[32px] mt-6 bg-black hover:bg-[#59606D] rounded-lg cursor-pointer"
           >
             <button class="mt-[14px] ml-[118px] text-white">Перейти к выбору</button>
           </div>

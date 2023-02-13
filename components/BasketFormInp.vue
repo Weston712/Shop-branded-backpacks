@@ -25,7 +25,7 @@
       placeholder="Адрес"
       required
     />
-    <div class="w-[364px] h-[50px] mb-[32px] mt-6 bg-black rounded-lg cursor-pointer">
+    <div class="w-[364px] h-[50px] mb-[32px] mt-6 bg-black rounded-lg hover:bg-[#59606D] cursor-pointer">
       <button class="mt-[14px] ml-[146px] text-white">Отправить</button>
     </div>
     <div class="flex pb-[115px] mt-8">
