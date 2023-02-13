@@ -28,7 +28,7 @@ const { product, cartStore } = defineProps(["product", "cartStore"]);
         <div class="font-bold text-[12px] mt-[7.13px] ml-1 text-[#F2C94C]">{{ product.rating }}</div>
       </div>
     </div>
-    <div @click="productStore.onDelete(product)" class="mt-[52px] mr-[22px] cursor-pointer hover:stroke-black">
+    <div @click="productStore.onDelete(product)" class=" absolute top-[15.62px] right-[18.75px] mt-[52px] mr-[22px] cursor-pointer hover:stroke-black">
       <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"

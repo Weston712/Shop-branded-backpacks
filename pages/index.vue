@@ -35,9 +35,9 @@ const productFilter = (e) => {
 };
 </script>
 <template>
-  <div class="ml-[248px] pt-[163px] mr-[88px]">
+  <div class="sm:ml-[248px] ml-40 pt-[163px] sm:mr-[88px] mr-7">
     <div class="flex flex-wrap items-end">
-      <div class="fixed top-[108px] z-50 right-[88px]">
+      <div class=" sm:fixed top-[108px] sm:z-50 right-[88px]">
         <div class="flex">
           <div class="font-normal text-base mr-[10px]">Сортировать по:</div>
           <div @click="onModalButtonClick" class="relative font-normal text-base ml-[4px] text-gray-600 cursor-pointer">
