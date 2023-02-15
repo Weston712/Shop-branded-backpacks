@@ -1,9 +1,7 @@
 <script setup>
 import states from "@/consts/states";
 const { data: products, loading: isProductsLoading } = await useFetch(`/api/products`);
-const { data: categories, loading: isCategoriesLoading } = await useFetch(
-  `https://frontend-test.idaproject.com/api/product-category`
-);
+const { data: categories, loading: isCategoriesLoading } = await useFetch(`/api/categories`);
 
 const categoryAll = { id: 0, name: "Все" };
 const categoriesState = useState(states.ALL_CATEGORIES, () => [categoryAll, ...categories.value]);
@@ -16,7 +14,7 @@ useState(states.PROCUCTS, () => ({
   ),
 }));
 
-console.log("> App -> products:", products.value);
+// console.log("> App -> products:", products.value);
 </script>
 <template>
   <div v-if="isProductsLoading && isCategoriesLoading">Loading</div>
